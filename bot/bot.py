@@ -97,7 +97,6 @@ class WhatsappBot:
         }
         self.__PAYLOAD = {
             "WhatsappID": whatsapp_id,
-            "number": whatsapp_number
         }
 
     def set_api_key(self, api_key: str, ):

@@ -1,4 +1,5 @@
 import os.path
+import pytz
 
 from dotenv import load_dotenv
 from openai import OpenAI
@@ -20,6 +21,8 @@ WHATSAPP_API_KEY = os.getenv('WHATSAPP_API_KEY')
 WHATSAPP_NUMBER = os.getenv('WHATSAPP_NUMBER')
 
 TIME_ZONE_STR = os.getenv('TIME_ZONE')
+
+TIME_ZONE = pytz.timezone(TIME_ZONE_STR)
 
 OPEN_AI_CLIENT = OpenAI(api_key=OPEN_AI_API)
 

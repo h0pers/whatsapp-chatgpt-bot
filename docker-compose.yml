@@ -12,7 +12,7 @@ services:
       - "${REDIS_PORT}:${REDIS_PORT}"
   celery:
     build: .
-    command: bash -c "celery -A bot.celery:app worker -l info"
+    command: bash -c "celery -A bot.celery:app worker -l info -P eventlet"
     env_file:
       - .env
     restart: always

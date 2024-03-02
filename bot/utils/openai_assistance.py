@@ -15,7 +15,6 @@ def assistance_answer(message_text: str) -> str:
         assistant_id=OPEN_AI_ASSISTANCE_ID,
     )
     while run.status != 'completed':
-        sleep(1)
         run = OPEN_AI_CLIENT.beta.threads.runs.retrieve(
             thread_id=thread.id,
             run_id=run.id
